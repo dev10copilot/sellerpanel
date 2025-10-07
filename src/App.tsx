@@ -78,7 +78,7 @@ function App() {
       <div className="flex-1 flex flex-col">
         <Header />
         
-        <main className="flex-1 p-6">
+        <main className="flex-1 py-6 px-3">
           <div className="max-w-7xl mx-auto">
             {renderContent()}
           </div>
