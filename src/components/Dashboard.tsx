@@ -76,46 +76,6 @@ const Dashboard: React.FC = () => {
       purchaseTotal: '$95.00',
       tax: 'test tax',
       status: 'Processing'
-    },
-    {
-      id: '100000005',
-      date: 'May 14, 2024 4:10 PM',
-      customer: 'Alice Brown',
-      products: ['Ring - Accessories', 'Bag - Women Product', 'Bracelet 1', 'Bracelet 2'],
-      baseTotal: '$75.00',
-      purchaseTotal: '$85.00',
-      tax: 'test tax',
-      status: 'Completed'
-    },
-    {
-      id: '100000006',
-      date: 'May 13, 2024 3:30 PM',
-      customer: 'Bob Wilson',
-      products: ['Ring - Accessories', 'Bag - Women Product', 'Bracelet 1', 'Bracelet 2'],
-      baseTotal: '$90.00',
-      purchaseTotal: '$100.00',
-      tax: 'test tax',
-      status: 'Completed'
-    },
-    {
-      id: '100000007',
-      date: 'May 12, 2024 2:45 PM',
-      customer: 'Carol Davis',
-      products: ['Ring - Accessories', 'Bag - Women Product', 'Bracelet 1', 'Bracelet 2'],
-      baseTotal: '$65.00',
-      purchaseTotal: '$75.00',
-      tax: 'test tax',
-      status: 'Completed'
-    },
-    {
-      id: '100000008',
-      date: 'May 11, 2024 1:20 PM',
-      customer: 'David Miller',
-      products: ['Ring - Accessories', 'Bag - Women Product', 'Bracelet 1', 'Bracelet 2'],
-      baseTotal: '$110.00',
-      purchaseTotal: '$120.00',
-      tax: 'test tax',
-      status: 'Processing'
     }
   ];
 
