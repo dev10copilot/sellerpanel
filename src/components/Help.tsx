@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, ChevronRight, Book, MessageCircle, Phone, Mail, FileText, Package, CreditCard, Truck, Star, BarChart3, Settings, HelpCircle } from 'lucide-react';
+import { Search, ChevronRight, Book, MessageCircle, Phone, Mail, FileText, Package, CreditCard, Truck, Star, BarChart3, Settings, HelpCircle, ShoppingCart, User } from 'lucide-react';
 
 interface HelpTopic {
   id: string;
@@ -1260,11 +1260,9 @@ Remember, building a successful online business takes time and consistency. Focu
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900">Help & Support</h2>
-          <p className="text-gray-600 mt-1">Find answers to common questions and get support</p>
-        </div>
+      <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-8 text-white">
+        <h1 className="text-3xl font-bold mb-2">Help & Support</h1>
+        <p className="text-blue-100">Find answers to your questions and get help with your seller account</p>
       </div>
 
       {renderContent()}

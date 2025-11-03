@@ -42,34 +42,34 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, onTabChange }) => {
   ];
 
   return (
-    <div className="w-64 bg-gray-900 text-white min-h-screen flex flex-col">
+    <div className="w-64 bg-gray-900 text-white min-h-screen fixed flex flex-col overflow-hidden">
       {/* Logo */}
-      <div className="p-6 border-b border-gray-800">
-        <h1 className="text-xl font-bold">Marketplace</h1>
-        <p className="text-gray-400 text-sm">Seller Dashboard</p>
+      <div className="px-4 py-4 border-b border-gray-800 flex-shrink-0">
+        <h1 className="text-lg font-bold">Marketplace</h1>
+        <p className="text-gray-400 text-xs">Seller Dashboard</p>
       </div>
 
-      {/* Navigation */}
-      <nav className="flex-1 py-6">
-        <ul className="space-y-2 px-4">
+      {/* Navigation - Scrollable */}
+      <nav className="flex-1 overflow-y-auto py-4">
+        <ul className="space-y-1 px-2">
           {menuItems.map((item) => {
             const Icon = item.icon;
             return (
               <li key={item.id}>
                 <button
                   onClick={() => onTabChange(item.id)}
-                  className={`w-full flex items-center justify-between px-4 py-3 rounded-lg transition-all duration-200 hover:bg-gray-800 ${
-                    activeTab === item.id 
-                      ? 'bg-blue-600 text-white shadow-lg' 
+                  className={`w-full flex items-center justify-between px-3 py-2 rounded-lg transition-all duration-200 hover:bg-gray-800 text-sm ${
+                    activeTab === item.id
+                      ? 'bg-blue-600 text-white shadow-lg'
                       : 'text-gray-300 hover:text-white'
                   }`}
                 >
-                  <div className="flex items-center space-x-3">
-                    <Icon size={20} />
+                  <div className="flex items-center space-x-2">
+                    <Icon size={18} />
                     <span className="font-medium">{item.label}</span>
                   </div>
                   {item.badge && (
-                    <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full">
+                    <span className="bg-orange-500 text-white text-xs px-1.5 py-0.5 rounded-full text-xs">
                       {item.badge}
                     </span>
                   )}
@@ -81,14 +81,14 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, onTabChange }) => {
       </nav>
 
       {/* User Profile */}
-      <div className="p-4 border-t border-gray-800">
-        <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
-            <User size={20} />
+      <div className="px-4 py-3 border-t border-gray-800 flex-shrink-0">
+        <div className="flex items-center space-x-2">
+          <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+            <User size={16} />
           </div>
-          <div className="flex-1">
-            <p className="font-medium">John Seller</p>
-            <p className="text-gray-400 text-sm">Premium Account</p>
+          <div className="flex-1 min-w-0">
+            <p className="font-medium text-sm truncate">John Seller</p>
+            <p className="text-gray-400 text-xs truncate">Premium Account</p>
           </div>
         </div>
       </div>
